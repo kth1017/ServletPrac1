@@ -1,0 +1,18 @@
+// 서블릿은 핵심 비즈니스 로직을 제외한 HTTP파싱 등의 과정을 대신해줌
+// 싱글톤은 무조건 공유변수를 유의하며 사용
+// 쓰레드를 무한히 생성할 수 없음 > 쓰레드풀을 활용
+// 논리 쓰레드 10 물리 쓰레드(코어) 5면 컨텍스트스위칭 발생(멀티프로세스에 비해 스택메모리만 스위칭되어 효율적)
+* 요청 > 쓰레드풀에서 쓰레드 가져옴 > 쓰레드가 서블릿을 호출
+* 요청 > WAS가 req/res 객체(서블릿이 관리) 생성 > 생성된 객체를 서블릿으로 실행
+
+//http서블릿으로 요청을 받는건 크게 getParam과 messageBody로 나뉨
+//http 요청 데이터
+- 1 GET URL 쿼리 파라미터 2 POST HTML FORM 3 http message body
+- 1과 2는 getparam으로 받는 서버쪽은 같은 형식으로 조회 가능, content-type은 get은 없고 post는 반드시 지정
+- 2는 브라우저가 body에 데이터를 담아 서버로 전송
+- 3 contentType = JSON은 request.inputStream > utf8 변환 > jackson라이브러리로 objectMapper.readValue를 통해 객체로 변환 
+- 2도 body에 담아 메세지를 직접 볼 수도 있음	
+
+//응답데이터
+- resp에 html을 담아 보내면 분기문,조건문 등 자바코드로 동적페이지도 생성 가능 if() {println(<div>)}
+

@@ -1,0 +1,6 @@
+// 페이지를 찾지못해 404에러 발생
+- 서버 껐다 킴 *해결*
+
+// 서블릿 예제 코딩 중 서버 종료하면 Execution failed for task ':ServletApplication.main()'발생
+- 예상은 서블릿을 안꺼줘서 생기는 문제
+- 방법은 gradle 경로를 재지정해줘야한다는데 critical한건 아니기에 보류

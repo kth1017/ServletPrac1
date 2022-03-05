@@ -1,0 +1,27 @@
+1 서블릿 기초
+
+2 http 요청
+#단순 텍스트, html
+#html body
+#json
+- inpustream > copytostring(utf-8) > objectmapper(객체로 전환)
+
+3 http 응답
+#단순 텍스트, html
+#json
+- resp에 contentType set > 객체에 정보 set > OM으로 json 변환, json은 기본이 utf-8
+
+4 회원관리 - 서블릿
+#서블릿 url(자바코드에 html)
+- 요청/응답에 자바코드로 일일이 html을 담아줘야하기에 매우 불안정
+#템플릿엔진(html에 자바코드)
+jsp
+-서버에서 서블릿으로 바뀌기때문에 req/resp import 없이 사용가능, 비즈니스로직이 뷰에 다 담겨있어 유지보수 지옥
+* 분리는 라이프사이클이 달라지면 이뤄지는게 가장 좋음
+#MVC 등장
+-jsp의 역할을 뷰와 컨트롤러로 쪼갬
+
+5 servlet mvc
+#서블릿mvc
+-getrequestDispatcher는 컨트롤러 > 뷰 에 사용, dispatcher.foward는 다른 서블릿,jps로 이동하여 서버내에서 재호출(!리다이렉트)
+-jsp에서 request.getAttribute에 member로 타입변환하고.. 하는 코드들을 줄이기위해 $문법을 제공한다
