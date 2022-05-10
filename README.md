@@ -2,7 +2,7 @@
  spring, servlet, JSP / 서블릿으로 mvc 구축 예제 / 2205
  블로그 포스팅 : https://fadet-coding.tistory.com/38
  
-# 예제 설명
+# 개요
 - 스프링에서 서블릿으로 직접 mvc 패턴 구현
 
 - 디스패쳐서블릿의 역할 이해 및 서블릿의 작동 원리 학습
