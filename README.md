@@ -1,6 +1,6 @@
 # ServletPrac1
- spring, servlet, JSP / 서블릿으로 mvc 구축 예제 / 2205
- 블로그 포스팅 : https://fadet-coding.tistory.com/38
+ - spring, servlet, JSP / 서블릿으로 mvc 구축 예제 / 2205
+ - 블로그 포스팅 : https://fadet-coding.tistory.com/38
  
 # 개요
 - 스프링에서 서블릿으로 직접 mvc 패턴 구현
